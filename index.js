@@ -4,6 +4,10 @@ const app = express();
 const port = 3003;
 
 // Ping endpoint
+app.get('/', (req, res) => {
+    res.json({ message: 'Welcome to our new api' });
+});
+
 app.get('/ping', (req, res) => {
     res.json({ message: 'pong' });
 });
