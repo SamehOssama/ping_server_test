@@ -1,7 +1,10 @@
-
+const dotenv = require('dotenv')
 const express = require('express');
 const app = express();
-const port = 3003;
+
+dotenv.config();
+
+const port = process.env.PORT;
 
 // Ping endpoint
 app.get('/', (req, res) => {
