@@ -7,6 +7,8 @@ dotenv.config();
 const port = process.env.PORT || 3000;
 const numCards = parseInt(process.env.NUM, 10) || 5;
 
+const mainHeading = 'This is our test website';
+
 // Ping endpoint
 app.get('/ping', (req, res) => {
     res.json({ message: 'pong' });
@@ -71,7 +73,7 @@ app.get('/', (req, res) => {
         </head>
         <body>
             <div class="header">
-                <h1>This is our test website</h1>
+                <h1>${mainHeading}</h1>
                 <h2>Value from env var: <span>${envValue}</span></h2>
             </div>
             <div class="cards-container">
