@@ -7,7 +7,7 @@ dotenv.config();
 const port = process.env.PORT || 3000;
 const numCards = parseInt(process.env.NUM, 10) || 5;
 
-const mainHeading = 'This is our test website UPDATED';
+const mainHeading = 'This is our test website';
 
 // Ping endpoint
 app.get('/ping', (req, res) => {
